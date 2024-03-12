@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulejtor BMI grubasie</title>
+    <script>
+        function oblicz() {
+            var waga = document.getElementById("waga").value;
+            var wzrost = document.getElementById("wzrost").value;
+            var bmi = waga / (wzrost * wzrost);
+            document.getElementById("wynik").innerHTML = (bmi * 10000).toFixed(3);
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Georgia;
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            color: white;
+            text-size-adjust: 48px;
+        }
+
+        h2 {
+            color: white;
+            text-size-adjust: 32px;
+        }
+
+        input {
+            background-color: gray;
+            color: white;
+            text-size-adjust: 22px;
+        }
+
+        label {
+            text-size-adjust: 28px;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Oblicz swe BMI</h1>
+    <h2>UWAGA! BMI zostało opracowanie wyłącznie dla dorosłych!!!!! Nie może być stosowane u dzieci</h2>
+    <label for="waga">Podaj swoją wagę!</label>
+    <input type="number" dir="rtl" id="waga" value=0>
+    <br>
+    <label for="wzrost">Podaj swój wzrost!</label>
+    <input type="number" dir="rtl" id="wzrost" value=0>
+    <br>
+    <input type="button" dir="rtl" value="Oblicz BMI" onclick="oblicz()">
+    <br>
+    <div id="wynik">Tu jest wynik 😱</div>
+    <br>
+    <br>
+    <h2>Tabela BMI:</h2>
+    <img src="img/tabela_bmi.png">
+
+
+</body>
+
+</html>
